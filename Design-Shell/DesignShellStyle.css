@@ -1,0 +1,36 @@
+.h1class{
+  margin: 10px;
+  font-style: italic;
+  font-size:xx-large;
+  background-color: crimson;
+  color:blue;
+}
+
+.divclass{
+    font-size: large;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 20px;
+    font-family: cursive;
+    
+
+}
+
+.pclass{
+    padding: 20px;
+    border:solid blue 2px;
+    margin:10px;
+    width:120px;
+    height: 370px;
+    font-family: sans-serif;
+
+}
+
+.tableclass{
+    border:5px solid black;
+    
+    color: coral;
+    font-family: fantasy;
+    margin-left:auto; 
+    margin-right:auto;
+}
