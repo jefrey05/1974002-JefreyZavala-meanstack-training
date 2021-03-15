@@ -1,0 +1,19 @@
+table, th, td {
+    border: 1px solid black;
+  }
+
+  th{
+   background-color:dodgerblue;
+   color: white;
+  }
+
+  h1{
+      text-align: center;
+      color: blue;
+  }
+  
+  form{
+      padding: 100px;
+  }
+
+ 
