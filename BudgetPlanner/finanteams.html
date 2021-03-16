@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="Budgetstyle.css">
+    <style>
+        table{
+            font-weight: bold;
+            text-align: left;
+            
+        }
+        td{
+            padding-left: 10px;
+        }
+        th{
+            color: white;
+            background-color: royalblue;
+            padding-left: 30px;
+            padding-right: 30px;
+            text-align: center;
+        }
+    </style>
+    <script src="script.js"></script>   
+    <script>
+        window.addEventListener('DOMContentLoaded', function(){
+            var table = document.getElementById('budget_table');
+            var data = retrieveFromSessionArray('data') || [];
+            var total = 0;
+            var formatter = new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'USD',
+                minimumFractionDigits: 0,
+            });
+            for(let item of data){
+                let tr = document.createElement('tr');
+                let tdcname = document.createElement('td');
+                tdcname.innerText = item.cname;
+                let tdpname = document.createElement('td');
+                tdpname.innerText = item.pname;
+                let tdbudget = document.createElement('td');
+                tdbudget.innerText = formatter.format(item.budget);
+                total+= parseInt(item.budget);
+                tr.appendChild(tdcname);
+                tr.appendChild(tdpname);
+                tr.appendChild(tdbudget);
+                table.appendChild(tr);
+            }
+            document.getElementById('total').innerText = formatter.format(total);
+        });
+    </script>
+</head>
+<body>
+    <h1 >Finance Teams</h1>
+    <div class="box">
+        
+        <table align="center" id="budget_table">
+            <caption style="text-decoration: underline; color: cornflowerblue; font-weight: bold;">Annual Budget</caption>
+            <tr>
+                <th>Client Name</th>
+                <th>Project Name</th>
+                <th>Budget</th>
+            </tr>
+            
+        </table>
+        <p>Total Budget : <span id="total"></span></p>
+        <a href="index.html" style="display: block; text-align: left;">Back</a>
+    </div>
+</body>
+</html>
