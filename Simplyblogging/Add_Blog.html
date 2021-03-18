@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <title> Blogging Web Page </title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: rgb(238, 241, 197);
+    }
+
+    .container {
+      margin: 10px 50px;
+    }
+
+    .form-group {
+      margin: 10px;
+    }
+
+    input {
+      width: 100%;
+      border: solid 1px #eee;
+      padding: 15px 10px;
+    }
+
+    #addBlog {
+      height: 50px;
+      width: 200px;
+      background: lightseagreen;
+
+      float: left;
+      box-shadow: 0 0 1px #ccc;
+      -webkit-transition: all 0.5s ease-in-out;
+      border: 0px;
+      color: #fff;
+    }
+
+    #addBlog:hover {
+      -webkit-transform: scale(1.1);
+      background: #31708f;
+    }
+
+    h1 {
+      margin-top: 2%;
+      margin-bottom: 2%;
+      margin-left: 38%;
+    }
+
+    .lists {
+      list-style-type: none;
+      float: left ;
+      border: 3px solid #31708f;
+      padding: 30px;
+      font-size: 22px;
+      font-weight: 400;
+    }
+  </style>
+
+</head>
+
+<body>
+  <h1>Simply Blogging</h1>
+  <section>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Add Blog <span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contacts</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </section>
+  <br>
+
+  <section>
+    <div id="" class="container">
+      <form role="form">
+        <div class="form-group">
+          <label>
+            <h4>Title</h4>
+          </label>
+          <input class="form-control" type="text" id="title_input" placeholder="Title.....">
+        </div><br>
+
+        <div class="form-group">
+          <label for="">
+            <h4>Articles</h4>
+          </label>
+          <textarea class="form-control" id="article_input" rows="3" placeholder="Articles....."></textarea>
+        </div> <br>
+
+        <div class="form-group">
+          <label for="">
+            <h4>Add Image</h4>
+          </label>
+          <input class="form-control" type='file' id="image_input">
+          <br><img id="myImg" src="#" height='200' width='300'>
+        </div> <br>
+
+        <div class="form-group">
+          <button id="addBlog" type='button'>Add Blog</button>
+        </div> <br>
+      </form> <br>
+
+      <hr>
+      <h2>Blogs</h2>
+
+      <div id="blogList">
+
+      </div>
+    </div>
+
+  </section>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
