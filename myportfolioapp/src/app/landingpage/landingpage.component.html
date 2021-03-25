@@ -1,0 +1,60 @@
+
+<header>
+    <!---->
+    <div id="intro" class="view">
+        <div class=" rgba-black-strong">
+            <div class="row d-flex justify-content-center text-center">
+                <h2 class="font-weight-bold white-text pt-5 mb-2">My Portfolio</h2>
+            </div>
+        </div>
+    </div>
+    <!--/.-->
+</header>
+
+<!--Main layout-->
+<main class="mt-5">
+    <div class="container">
+
+        <hr class="my-5">
+
+        <!--Section-->
+        <section id="examples" class="text-center">
+
+            <!-- Heading -->
+            <h2 class="mb-5 font-weight-bold">Welcome {{userName}}  (<a href="/login"> Logout </a>)</h2> 
+            <form class="text-center border border-light p-5" #userRef="ngForm" (ngSubmit)="buttonBehaviour(userRef.value)">
+                
+                <input type="User" class="form-control mb-4" placeholder="Contact name" required name="name" ngModel>
+                
+                <input type="password" class="form-control mb-4" placeholder="Phone no." required name="phone" ngModel>
+            
+                <!-- Sign in button -->
+                <button mdbBtn [disabled]="userRef.invalid" color="info" block="true" class="my-4" type="submit">Save</button>
+            </form>
+        </section>
+        
+        <div class="example-container mat-elevation-z8">
+            <mat-table #table [dataSource]="dataSource">
+                <!-- Name Column -->
+                <ng-container matColumnDef="contact">
+                <mat-header-cell *matHeaderCellDef> Contact name </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.contact}} </mat-cell>
+                </ng-container>
+            
+                <!-- Weight Column -->
+                <ng-container matColumnDef="phone">
+                <mat-header-cell *matHeaderCellDef> Phone no. </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.phone}} </mat-cell>
+                </ng-container>
+            
+            
+                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+            </mat-table>
+        </div>
+
+    </div>
+</main>
+<!--Main layout-->
+
+  

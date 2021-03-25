@@ -1,0 +1,30 @@
+html,
+body,
+header,
+#intro {
+    height: 100%;
+}
+
+#intro {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: aqua;
+}
+
+table {
+  width: 50%;
+  margin: auto;
+}
+
+mat-cell{
+  display:flex !important;
+  justify-content:center!important;
+  
+}
+
+mat-header-cell {
+  display:flex;
+  justify-content:center;
+}

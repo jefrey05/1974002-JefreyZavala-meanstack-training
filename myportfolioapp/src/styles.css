@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+
+.app-body{
+    margin-left: 35%;
+    margin-top: 2%;
+    width: 30%;
+}
+
+.ng-valid[required], .ng-valid.required {
+    border-left: 5px solid #42A948;
+}
+
+.ng-invalid:not(form) {
+    border-left: 5px solid #A94442;
+}
