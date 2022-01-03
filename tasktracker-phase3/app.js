@@ -9,7 +9,7 @@ let tasksjs = [];
 
 fs.readFile("./tasks.json", "utf8", (err, data) => {
   if (err) {
-    console.log(`Error reading file from disk: ${err}`);
+    console.log(`Error Reading file from disk: ${err}`);
   } else {
     // parse JSON string to JSON object
     const tasks = JSON.parse(data);
