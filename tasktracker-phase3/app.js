@@ -80,21 +80,21 @@ const requestListener = function (req, res) {
                 
             `);
   });
-  fs.writeFile('tasks.json', JSON.stringify(tasksjs), function (err) {
+  fs.writeFile("tasks.json", JSON.stringify(tasksjs), function (err) {
     if (err) return console.log(err);
     //console.log('DONE');
   });
 
-  if(!queryObject.empId && queryObject.taskId && !queryObject.task){
-      for(let i=0; i<tasksjs.length; i++){
-          //console.log("TESTING:::")
-          if(queryObject.taskId==tasksjs[i].taskId){
-            tasksjs.splice(i, 1);
-            //console.log(tasksjs);
-            break;
-          }
+  if (!queryObject.empId && queryObject.taskId && !queryObject.task) {
+    for (let i = 0; i < tasksjs.length; i++) {
+      //console.log("TESTING:::")
+      if (queryObject.taskId == tasksjs[i].taskId) {
+        tasksjs.splice(i, 1);
+        //console.log(tasksjs);
+        break;
       }
-      //console.log(JSON.stringify(tasksjs))
+    }
+    //console.log(JSON.stringify(tasksjs))
   }
 
   /* fs.writeFile('tasks.json', JSON.stringify(tasksjs), function (err) {
