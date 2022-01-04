@@ -88,7 +88,7 @@ function previewFile() {
   reader.addEventListener(
     "load",
     function () {
-      // convert image file to base64 String
+      // convert Image file to base64 String
       preview.src = reader.result;
       images.push(reader.result);
       localStorage.setItem("image", JSON.stringify(images));
