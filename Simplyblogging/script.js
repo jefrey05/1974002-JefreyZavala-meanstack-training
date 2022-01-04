@@ -37,7 +37,7 @@ function printBlogs() {
     let data = [title_input, article_input];
     const savedBlogs = localStorage.getItem("blog") || "[]";
     var blogs = JSON.parse(savedBlogs);
-    blogs.push(data); // add the result
+    blogs.push(data); // add the Result
 
     const prevImg = document.querySelector("#img");
     //console.log(prevImg.getAttribute("src"));
