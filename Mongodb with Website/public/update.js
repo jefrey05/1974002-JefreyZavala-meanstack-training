@@ -1,37 +1,34 @@
 /* globals fetch */
-var update = document.getElementById('update')
+var update = document.getElementById("update");
 
-
-update.addEventListener('click', function () {
-  var id = document.getElementById('id').value;
-  var amount = document.getElementById('amount').value;
+update.addEventListener("click", function () {
+  var id = document.getElementById("id").value;
+  var amount = document.getElementById("amount").value;
   console.log(id);
   console.log(amount);
-  if(isNaN(id)){
+  if (isNaN(id)) {
     return null;
   }
-  if(isNaN(amount)){
+  if (isNaN(amount)) {
     return null;
   }
-  fetch('update', {
-    method: 'put',
-    headers: {'Content-Type': 'application/json'},
+  fetch("update", {
+    method: "put",
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      'id': id,
-      'amount': amount
+      id: id,
+      amount: amount,
+    }),
+  })
+    .then((response) => {
+      if (response.ok) return response.json();
+      window.location = "/fetch";
     })
-  })
-  .then(response => {
-    if (response.ok) return response.json()
-    window.location="/fetch"
-
-  })
-  .then(data => {
-    console.log(data)
-    window.location="/fetch"
-
-  })
-})
+    .then((data) => {
+      console.log(data);
+      window.location = "/fetch";
+    });
+});
 
 // del.addEventListener('click', function () {
 //   fetch('quotes', {
