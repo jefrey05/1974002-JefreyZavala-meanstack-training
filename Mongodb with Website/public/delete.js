@@ -1,19 +1,18 @@
 /* globals fetch */
-var del = document.getElementById('delete')
+var del = document.getElementById("delete");
 
+del.addEventListener("click", function () {
+  var id = document.getElementById("id").value;
 
-del.addEventListener('click', function () {
-  var id = document.getElementById('id').value;
-
-  fetch('delete', {
-    method: 'delete',
+  fetch("delete", {
+    method: "delete",
     headers: {
-      'Content-Type': 'application/json'
+      "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      'id': id
-    })
+      id: id,
+    }),
   }).then(function (response) {
-    window.location="/fetch"
-  })
-})
+    window.location = "/fetch";
+  });
+});
