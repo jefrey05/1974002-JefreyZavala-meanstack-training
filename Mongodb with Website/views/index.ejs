@@ -1,41 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MY APP</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
-</head>
-<body>
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="/">
-        <h1>Course Platform</h1>
-      </a>
-  
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MY APP</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+          <h1>Course Platform</h1>
+        </a>
+
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+    </nav>
+
+    <div class="container">
+      <button
+        class="button is-primary is-large is-fullwidth"
+        onclick="window.location='/add'"
+      >
+        Add Course
+      </button>
     </div>
-  </nav>
-
-
-  <div class="container">
-    <button class="button is-primary is-large is-fullwidth" onclick="window.location='/add'">Add Course</button>
-  </div>
-  <div class="container">
-    <button class="button is-large is-info is-fullwidth" onclick="window.location='/update'" >Update Course</button>
-  </div>
-  <div class="container">
-    <button class="button is-large is-danger is-fullwidth" onclick="window.location='/delete'">Delete Course</button>
-  </div>
-  <div class="container">
-    <button class="button is-large is-warning is-fullwidth" onclick="window.location='/fetch'" >Fetch Course</button>
-  </div>
-
- 
-
-</body>
+    <div class="container">
+      <button
+        class="button is-large is-info is-fullwidth"
+        onclick="window.location='/update'"
+      >
+        Update Course
+      </button>
+    </div>
+    <div class="container">
+      <button
+        class="button is-large is-danger is-fullwidth"
+        onclick="window.location='/delete'"
+      >
+        Delete Course
+      </button>
+    </div>
+    <div class="container">
+      <button
+        class="button is-large is-warning is-fullwidth"
+        onclick="window.location='/fetch'"
+      >
+        Fetch Course
+      </button>
+    </div>
+  </body>
 </html>
