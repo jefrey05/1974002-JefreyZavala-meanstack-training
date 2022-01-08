@@ -1,4 +1,30 @@
-[{"firstName":"Jefrey ","lastName":"Zavala","age":"22","gender":"Male","timeStamp":1617649617586},
-    {"firstName":"Sam","lastName":"Will","age":"29","gender":"Female","timeStamp":1617649706187},
-    {"firstName":"John","lastName":"Kim","age":"23","gender":"Male","timeStamp":1617649733545},
-    {"firstName":"Kim","lastName":"Jay","age":"19","gender":"Female","timeStamp":1617649785658}]
+[
+  {
+    "firstName": "Jefrey ",
+    "lastName": "Zavala",
+    "age": "22",
+    "gender": "Male",
+    "timeStamp": 1617649617586
+  },
+  {
+    "firstName": "Sam",
+    "lastName": "Will",
+    "age": "29",
+    "gender": "Female",
+    "timeStamp": 1617649706187
+  },
+  {
+    "firstName": "John",
+    "lastName": "Kim",
+    "age": "23",
+    "gender": "Male",
+    "timeStamp": 1617649733545
+  },
+  {
+    "firstName": "Kim",
+    "lastName": "Jay",
+    "age": "19",
+    "gender": "Female",
+    "timeStamp": 1617649785658
+  }
+]
