@@ -1,43 +1,59 @@
 <div class="container mt-5">
-  <h1 class="text-center">{{title}}</h1>
-  
-  
-    <div *ngFor="let q of questions">
-      <div class="card">
-        <div class="card-header">
-          <h3>{{ q.question }}</h3>
-        </div>
-        <div class="card-body">
-          <ul>
-            <li *ngFor="let o of q.options">
-              <input type="radio" name="{{q.id}}" (click)="setAnswer(q,o)">
-              {{ o }}
-              <span *ngIf="resultVisible">  
-                <span class="text-danger" *ngIf="givenAnswers[q['id']] == o && givenAnswers[q['id']] != q['correct']">
-                  * Selected answer is wrong
-                </span>
-                <span class="text-success" *ngIf="givenAnswers[q['id']] != o && o == q['correct']">
-                  * Correct answer
-                </span>
-                <span class="text-success" *ngIf="givenAnswers[q['id']] == o && givenAnswers[q['id']] == q['correct']">
-                  * Selected answer is correct
-                </span>
-              </span> 
-            </li>
-          </ul>
-        </div>
+  <h1 class="text-center">{{ title }}</h1>
+
+  <div *ngFor="let q of questions">
+    <div class="card">
+      <div class="card-header">
+        <h3>{{ q.question }}</h3>
       </div>
-      
+      <div class="card-body">
+        <ul>
+          <li *ngFor="let o of q.options">
+            <input type="radio" name="{{ q.id }}" (click)="setAnswer(q, o)" />
+            {{ o }}
+            <span *ngIf="resultVisible">
+              <span
+                class="text-danger"
+                *ngIf="
+                  givenAnswers[q['id']] == o &&
+                  givenAnswers[q['id']] != q['correct']
+                "
+              >
+                * Selected answer is wrong
+              </span>
+              <span
+                class="text-success"
+                *ngIf="givenAnswers[q['id']] != o && o == q['correct']"
+              >
+                * Correct answer
+              </span>
+              <span
+                class="text-success"
+                *ngIf="
+                  givenAnswers[q['id']] == o &&
+                  givenAnswers[q['id']] == q['correct']
+                "
+              >
+                * Selected answer is correct
+              </span>
+            </span>
+          </li>
+        </ul>
+      </div>
     </div>
-    <hr>
-    
-    <button class="btn btn-primary" *ngIf="!resultVisible" (click)="showResult()">Submit</button>
-    <div class="text-center " *ngIf="resultVisible" >
-      <p *ngIf="score > 6" class="text-success text-center"> Result: {{score}}/{{questions.length}} : Pass </p>
-      <p *ngIf="score < 7" class="text-danger text-center"> Result: {{score}}/{{questions.length}} : Fail </p>
-    </div>
-    <hr>
+  </div>
+  <hr />
+
+  <button class="btn btn-primary" *ngIf="!resultVisible" (click)="showResult()">
+    Submit
+  </button>
+  <div class="text-center" *ngIf="resultVisible">
+    <p *ngIf="score > 6" class="text-success text-center">
+      Result: {{ score }}/{{ questions.length }} : Pass
+    </p>
+    <p *ngIf="score < 7" class="text-danger text-center">
+      Result: {{ score }}/{{ questions.length }} : Fail
+    </p>
+  </div>
+  <hr />
 </div>
-
-
-
