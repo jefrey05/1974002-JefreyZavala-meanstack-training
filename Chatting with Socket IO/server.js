@@ -1,5 +1,5 @@
 let app = require("express")();
-let http = require("http").Server(app); // to load the library we have run port number using hhtp module
+let http = require("http").Server(app); // to load the library we have to run port number using hhtp module
 let io = require("socket.io")(http);
 
 app.get("/", (req, res) => {
