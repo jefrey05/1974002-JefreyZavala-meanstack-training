@@ -54,7 +54,7 @@ io.on("connection", (socket) => {
         } else {
           console.log(err);
         }
-        obj.disconnect(); //close the connectiond..
+        obj.disconnect(); //close the connection
       });
     });
   });
