@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <!-- connected socket library file -->
     <script src="/socket.io/socket.io.js"></script>
     <script type="text/JavaScript">
-    var socket = io();      // connection happen with server program. 
-  
-    function sendMessage() {
-        let name = document.getElementById("name").value;
-        let message = document.getElementById("message").value;
-        
-        socket.emit("name",name);
-        socket.emit("message",message);
-    }
-  
+      var socket = io();      // connection happen with server program.
+
+      function sendMessage() {
+          let name = document.getElementById("name").value;
+          let message = document.getElementById("message").value;
+
+          socket.emit("name",name);
+          socket.emit("message",message);
+      }
     </script>
-</head>
-<body>
-   
-   <center><label>Name: </label></center>
-   <center><input type="text" id = "name"/></center>
-   <br/>
-   <center><label>Message: </label></center>
-   <center><input type="text" id = "message" /><br/></center>
-   <center><input type="button" value="click to send message" onclick="sendMessage()"/></center>
-   
-</body>
+  </head>
+  <body>
+    <center><label>Name: </label></center>
+    <center><input type="text" id="name" /></center>
+    <br />
+    <center><label>Message: </label></center>
+    <center><input type="text" id="message" /><br /></center>
+    <center>
+      <input
+        type="button"
+        value="click to send message"
+        onclick="sendMessage()"
+      />
+    </center>
+  </body>
 </html>
