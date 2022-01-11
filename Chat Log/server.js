@@ -38,7 +38,7 @@ io.on("connection", (socket) => {
     count++;
 
     obj.connect(url, mongooseDbOption); //ready to connect
-    let db = obj.connection; // connected to database.
+    let db = obj.connection; // connected to database
     db.on("error", (err) => console.log(err));
     db.once("open", () => {
       //Defined the Schema
