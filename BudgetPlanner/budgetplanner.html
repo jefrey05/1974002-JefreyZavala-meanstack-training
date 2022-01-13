@@ -1,74 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <link rel="stylesheet" href="Budgetstyle.css">
+    <link rel="stylesheet" href="Budgetstyle.css" />
     <style>
-        th{
-            text-decoration: underline;
-            color: darkred;
-            text-align: left;
-            
-        }
-        td, th{
-            background-color: white;
-        }
-        
+      th {
+        text-decoration: underline;
+        color: darkred;
+        text-align: left;
+      }
+      td,
+      th {
+        background-color: white;
+      }
     </style>
     <script src="script.js"></script>
     <script>
-        function processForm(event){
-            event.preventDefault();
-            var cname = document.getElementById('cname');
-            var pname = document.getElementById('pname');
-            var budget = document.getElementById('budget');
+      function processForm(event) {
+        event.preventDefault();
+        var cname = document.getElementById("cname");
+        var pname = document.getElementById("pname");
+        var budget = document.getElementById("budget");
 
-            var obj = {cname: cname.value, pname: pname.value, budget: budget.value};
-            storeInSessionArray('data', obj);
-            alert("Added");
-            clearInputs();
-        }
+        var obj = {
+          cname: cname.value,
+          pname: pname.value,
+          budget: budget.value,
+        };
+        storeInSessionArray("data", obj);
+        alert("Added");
+        clearInputs();
+      }
 
-        function clearInputs(event){
-            if(event)
-                event.preventDefault();
-            var cname = document.getElementById('cname');
-            var pname = document.getElementById('pname');
-            var budget = document.getElementById('budget');
-            cname.value = "";
-            pname.value = "";
-            budget.value = "";
-        }
-        
+      function clearInputs(event) {
+        if (event) event.preventDefault();
+        var cname = document.getElementById("cname");
+        var pname = document.getElementById("pname");
+        var budget = document.getElementById("budget");
+        cname.value = "";
+        pname.value = "";
+        budget.value = "";
+      }
     </script>
-</head>
-<body>
-    <h1 >Program Managers</h1>
+  </head>
+  <body>
+    <h1>Program Managers</h1>
     <div class="box">
-        
-        <table align="center">
-            <caption style="text-decoration: underline; color: cornflowerblue; font-weight: bold;">Add New Budget</caption>
-            <tr>
-                <th>Client Name</th>
-                <td><input type="text" id="cname" /></td>
-            </tr>
-            <tr>
-                <th>Project Name</th>
-                <td><input type="text" id="pname" /></td>
-            </tr>
-            <tr>
-                <th>Budget</th>
-                <td><input type="text" id="budget" /></td>
-            </tr>
-            <tr>
-                <td><a href="#"  onclick="processForm(event);">Add</a></td>
-                <td><a href="#" onclick="clearInputs();">Clear</a></td>
-            </tr>
-        </table>
-        <a href="index.html" style="display: block; text-align: left;">Back</a>
+      <table align="center">
+        <caption
+          style="
+            text-decoration: underline;
+            color: cornflowerblue;
+            font-weight: bold;
+          "
+        >
+          Add New Budget
+        </caption>
+        <tr>
+          <th>Client Name</th>
+          <td><input type="text" id="cname" /></td>
+        </tr>
+        <tr>
+          <th>Project Name</th>
+          <td><input type="text" id="pname" /></td>
+        </tr>
+        <tr>
+          <th>Budget</th>
+          <td><input type="text" id="budget" /></td>
+        </tr>
+        <tr>
+          <td><a href="#" onclick="processForm(event);">Add</a></td>
+          <td><a href="#" onclick="clearInputs();">Clear</a></td>
+        </tr>
+      </table>
+      <a href="index.html" style="display: block; text-align: left">Back</a>
     </div>
-</body>
+  </body>
 </html>
